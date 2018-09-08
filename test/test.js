@@ -31,4 +31,4 @@ describe('bpmnlint-pack-config', function() {
 
   });
 
-})
+});

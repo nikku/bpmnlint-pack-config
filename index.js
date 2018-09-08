@@ -4,11 +4,6 @@ const { readFileSync } = require('fs');
 
 const { rollup } = require('rollup');
 
-const {
-  writeFileSync,
-  unlinkSync
-} = require('fs');
-
 const NodeResolver = require('bpmnlint/lib/resolver/node-resolver');
 
 const rollupResolve = require('rollup-plugin-node-resolve');
@@ -132,7 +127,7 @@ async function packConfig(configPath, target) {
   const code = await bundle(configPath, intermediateCode, target);
 
   return code;
-};
+}
 
 
 module.exports.generatePacked = generatePacked;
