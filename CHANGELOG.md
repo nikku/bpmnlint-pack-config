@@ -6,6 +6,10 @@ All notable changes to [bpmnlint-pack-config](https://github.com/nikku/bpmnlint-
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.2.2
+
+* `CHORE`: drop unused dependency
+
 ## 0.2.1
 
 * `FIX`: add shebang to cli
