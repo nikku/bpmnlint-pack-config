@@ -1,5 +1,7 @@
 # bpmnlint-pack-config
 
+[![Build Status](https://travis-ci.org/nikku/bpmnlint-pack-config.svg?branch=master)](https://travis-ci.org/nikku/bpmnlint-pack-config)
+
 Pack a [bpmnlint](https://github.com/bpmn-io/bpmnlint) configuration as a consumable bundle.
 
 
