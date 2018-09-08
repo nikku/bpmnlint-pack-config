@@ -6,6 +6,10 @@ All notable changes to [bpmnlint-pack-config](https://github.com/nikku/bpmnlint-
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.2.1
+
+* `FIX`: add shebang to cli
+
 ## 0.2.0
 
 * `FIX`: correct published package name to `bpmnlint-pack-config`
