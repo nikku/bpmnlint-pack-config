@@ -11,8 +11,6 @@ const {
 
 const NodeResolver = require('bpmnlint/lib/resolver/node-resolver');
 
-const tempy = require('tempy');
-
 const rollupResolve = require('rollup-plugin-node-resolve');
 const rollupCommonjs = require('rollup-plugin-commonjs');
 
@@ -93,14 +91,6 @@ function readConfig(path) {
   const contents = readFileSync(path, 'utf8');
 
   return JSON.parse(contents);
-}
-
-function writeTempFile(code) {
-  const filePath = tempy.file({ extension: 'js' });
-
-  writeFileSync(filePath, code, 'utf8');
-
-  return filePath;
 }
 
 async function bundle(configPath, incode, target) {
