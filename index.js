@@ -61,10 +61,15 @@ var config = {
   rules: ${serializedRules}
 };
 
-export {
-  resolver,
-  config
-};`;
+var bundle = {
+  resolver: resolver,
+  config: config
+};
+
+export { resolver, config };
+
+export default bundle;
+`;
 
   const importCode = Object.entries(resolvedRules).filter(
     ([ key, value ]) => linter.parseRuleValue(value).ruleFlag !== 'off'
@@ -112,7 +117,8 @@ async function bundle(configPath, incode, target) {
   });
 
   const { code } = await bundle.generate({
-    format: target
+    format: target,
+    exports: 'named'
   });
 
   return code;

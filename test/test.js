@@ -15,8 +15,10 @@ describe('bpmnlint-pack-config', function() {
       const code = await packConfig('test/.bpmnlintrc', 'cjs');
 
       // then
-      expect(code).to.contain('exports.resolver = resolver;');
-      expect(code).to.contain('exports.config = config;');
+      expect(code).to.contain('exports.default = bundle');
+
+      expect(code).to.contain('exports.config = config');
+      expect(code).to.contain('exports.resolver = resolver');
     });
 
 
@@ -26,7 +28,8 @@ describe('bpmnlint-pack-config', function() {
       const code = await packConfig('test/.bpmnlintrc', 'es');
 
       // then
-      expect(code).to.contain('export { resolver, config };');
+      expect(code).to.contain('export default bundle;');
+      expect(code).to.contain('export { resolver, config }');
     });
 
   });
