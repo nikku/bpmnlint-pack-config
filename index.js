@@ -10,9 +10,6 @@ const rollupCommonjs = require('rollup-plugin-commonjs');
 
 async function packConfig(configPath, target) {
 
-  // TODO(nikku): properly resolve to relative path
-  configPath = './' + configPath;
-
   const bundle = await rollup({
     input: configPath,
     plugins: [
