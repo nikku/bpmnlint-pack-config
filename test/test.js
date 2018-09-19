@@ -48,6 +48,21 @@ describe('bpmnlint-pack-config', function() {
       expect(code).to.contain('export { resolver, config }');
     });
 
+
+    it('should pack custom named config', async function() {
+
+      // when
+      const { code } = await packConfig('test/other.json', 'esm');
+
+      // then
+      // imports are resolved
+      expect(code).not.to.contain('import rule_0');
+
+      // rules are resolved
+      expect(code).to.contain('"conditional-flows": "error"');
+      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = conditionalFlows;');
+    });
+
   });
 
 });
