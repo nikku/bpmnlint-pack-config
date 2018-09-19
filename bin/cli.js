@@ -48,7 +48,7 @@ async function run(options) {
     target
   } = options;
 
-  const code = await packConfig(config, target);
+  const { code } = await packConfig(config, target);
 
   if (outfile) {
     writeFileSync(outfile, code, 'utf8');

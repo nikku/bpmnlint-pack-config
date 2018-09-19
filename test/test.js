@@ -12,9 +12,17 @@ describe('bpmnlint-pack-config', function() {
     it('should write cjs', async function() {
 
       // when
-      const code = await packConfig('test/.bpmnlintrc', 'cjs');
+      const { code } = await packConfig('test/.bpmnlintrc', 'cjs');
 
       // then
+      // imports are resolved
+      expect(code).not.to.contain('import rule_0');
+
+      // rules are resolved
+      expect(code).to.contain('"conditional-flows": "error"');
+      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = conditionalFlows;');
+
+      // exports are in place
       expect(code).to.contain('exports.default = bundle');
 
       expect(code).to.contain('exports.config = config');
@@ -25,9 +33,17 @@ describe('bpmnlint-pack-config', function() {
     it('should write es', async function() {
 
       // when
-      const code = await packConfig('test/.bpmnlintrc', 'es');
+      const { code } = await packConfig('test/.bpmnlintrc', 'es');
 
       // then
+      // imports are resolved
+      expect(code).not.to.contain('import rule_0');
+
+      // rules are resolved
+      expect(code).to.contain('"conditional-flows": "error"');
+      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = conditionalFlows;');
+
+      // exports are in place
       expect(code).to.contain('export default bundle;');
       expect(code).to.contain('export { resolver, config }');
     });
