@@ -6,6 +6,12 @@ All notable changes to [bpmnlint-pack-config](https://github.com/nikku/bpmnlint-
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.4.0
+
+* `DOCS`: update usage to latest bpmnlint version
+* `CHORE`: use `rollup-plugin-bpmnlint` under the hood
+* `CHORE`: `#packConfig` returns `{ map, code }`
+
 ## 0.3.0
 
 * `FEAT`: provide `{ resolver, config }` default export
