@@ -16,17 +16,13 @@ bpmnlint-pack-config -c .bpmnlintrc -o packed-config.js -t es
 Consume the packed config as part of your web-modeler:
 
 ```javascript
-import {
-  config,
-  resolver
-} from './packed-config';
-
-
 import { Linter } from 'bpmnlint';
 
-var linter = new Linter({ resolver });
+import linterConfig from './packed-config';
 
-linter.lint(modelRoot, config);
+var linter = new Linter(linterConfig);
+
+const results = await linter.lint(modelRoot);
 ```
 
 
