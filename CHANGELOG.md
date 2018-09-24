@@ -6,6 +6,10 @@ All notable changes to [bpmnlint-pack-config](https://github.com/nikku/bpmnlint-
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.5.1
+
+* `CHORE`: support `bpmnlint@5`
+
 ## 0.5.0
 
 * `CHORE`: make `bpmnlint` a peer dependency
