@@ -25,6 +25,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "bpmnlint": "^4.1.0",
     "chai": "^4.1.2",
     "eslint": "^5.5.0",
     "eslint-plugin-bpmn-io": "^0.6.0",
@@ -32,11 +33,13 @@
     "npm-run-all": "^4.1.3"
   },
   "dependencies": {
-    "bpmnlint": "^3.2.0",
     "meow": "^5.0.0",
     "rollup": "^0.65.2",
-    "rollup-plugin-bpmnlint": "^0.1.0",
+    "rollup-plugin-bpmnlint": "^0.1.1",
     "rollup-plugin-commonjs": "^9.1.6",
     "rollup-plugin-node-resolve": "^3.4.0"
+  },
+  "peerDependencies": {
+    "bpmnlint": "^3.2.0 || ^4.0.0"
   }
 }
