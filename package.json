@@ -40,6 +40,6 @@
     "rollup-plugin-node-resolve": "^3.4.0"
   },
   "peerDependencies": {
-    "bpmnlint": "^3.2.0 || ^4.0.0 || ^5.0.0"
+    "bpmnlint": "^3.2.0 || ^4.0.0 || ^5.0.0 || ^6.0.0"
   }
 }
