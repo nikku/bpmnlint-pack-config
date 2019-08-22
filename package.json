@@ -25,7 +25,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "bpmnlint": "^5.0.0",
+    "bpmnlint": "^6.0.0",
     "chai": "^4.1.2",
     "eslint": "^5.5.0",
     "eslint-plugin-bpmn-io": "^0.6.0",
