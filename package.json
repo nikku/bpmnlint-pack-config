@@ -1,6 +1,6 @@
 {
   "name": "bpmnlint-pack-config",
-  "version": "0.5.3",
+  "version": "0.6.0",
   "description": "Pack bpmnlint config to a browser consumable bundle",
   "main": "index.js",
   "scripts": {
