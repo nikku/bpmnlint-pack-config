@@ -12,7 +12,9 @@ describe('bpmnlint-pack-config', function() {
     it('should write cjs', async function() {
 
       // when
-      const { code } = await packConfig('test/.bpmnlintrc', 'cjs');
+      const packed = await packConfig('test/.bpmnlintrc', 'cjs');
+
+      const { code } = packed.output[0];
 
       // then
       // imports are resolved
@@ -33,7 +35,9 @@ describe('bpmnlint-pack-config', function() {
     it('should write es', async function() {
 
       // when
-      const { code } = await packConfig('test/.bpmnlintrc', 'es');
+      const packed = await packConfig('test/.bpmnlintrc', 'es');
+
+      const { code } = packed.output[0];
 
       // then
       // imports are resolved
@@ -45,14 +49,16 @@ describe('bpmnlint-pack-config', function() {
 
       // exports are in place
       expect(code).to.contain('export default bundle;');
-      expect(code).to.contain('export { resolver, config }');
+      expect(code).to.contain('export { config, resolver }');
     });
 
 
     it('should write UMD', async function() {
 
       // when
-      const { code } = await packConfig('test/.bpmnlintrc', 'umd', 'FOO');
+      const packed = await packConfig('test/.bpmnlintrc', 'umd', 'FOO');
+
+      const { code } = packed.output[0];
 
       // then
       // imports are resolved
@@ -74,7 +80,9 @@ describe('bpmnlint-pack-config', function() {
     it('should pack custom named config', async function() {
 
       // when
-      const { code } = await packConfig('test/other.json', 'esm');
+      const packed = await packConfig('test/other.json', 'esm');
+
+      const { code } = packed.output[0];
 
       // then
       // imports are resolved
