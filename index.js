@@ -8,7 +8,7 @@ const rollupResolve = require('rollup-plugin-node-resolve');
 const rollupCommonjs = require('rollup-plugin-commonjs');
 
 
-async function packConfig(configPath, target) {
+async function packConfig(configPath, target, targetName) {
 
   const bundle = await rollup({
     input: configPath,
@@ -23,7 +23,8 @@ async function packConfig(configPath, target) {
 
   return await bundle.generate({
     format: target,
-    exports: 'named'
+    exports: 'named',
+    name: targetName
   });
 }
 
