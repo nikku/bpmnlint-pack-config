@@ -12,9 +12,7 @@ describe('bpmnlint-pack-config', function() {
     it('should write cjs', async function() {
 
       // when
-      const packed = await packConfig('test/.bpmnlintrc', 'cjs');
-
-      const { code } = packed.output[0];
+      const { code } = await packConfig('test/.bpmnlintrc', 'cjs');
 
       // then
       // imports are resolved
@@ -35,9 +33,7 @@ describe('bpmnlint-pack-config', function() {
     it('should write es', async function() {
 
       // when
-      const packed = await packConfig('test/.bpmnlintrc', 'es');
-
-      const { code } = packed.output[0];
+      const { code } = await packConfig('test/.bpmnlintrc', 'es');
 
       // then
       // imports are resolved
@@ -56,9 +52,7 @@ describe('bpmnlint-pack-config', function() {
     it('should write UMD', async function() {
 
       // when
-      const packed = await packConfig('test/.bpmnlintrc', 'umd', 'FOO');
-
-      const { code } = packed.output[0];
+      const { code } = await packConfig('test/.bpmnlintrc', 'umd', 'FOO');
 
       // then
       // imports are resolved
@@ -80,9 +74,7 @@ describe('bpmnlint-pack-config', function() {
     it('should pack custom named config', async function() {
 
       // when
-      const packed = await packConfig('test/other.json', 'esm');
-
-      const { code } = packed.output[0];
+      const { code } = await packConfig('test/other.json', 'esm');
 
       // then
       // imports are resolved

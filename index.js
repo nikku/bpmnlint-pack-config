@@ -21,11 +21,13 @@ async function packConfig(configPath, target, targetName) {
     ]
   });
 
-  return await bundle.generate({
+  const result = await bundle.generate({
     format: target,
     exports: 'named',
     name: targetName
   });
+
+  return result.output[0];
 }
 
 module.exports.packConfig = packConfig;
