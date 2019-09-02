@@ -6,6 +6,10 @@ All notable changes to [bpmnlint-pack-config](https://github.com/nikku/bpmnlint-
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.6.0
+
+* `FEAT`: generate UMD modules
+
 ## 0.5.3
 
 * `CHORE`: mark `bpmnlint@6` as supported peer dependency
