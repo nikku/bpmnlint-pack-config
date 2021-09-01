@@ -6,6 +6,13 @@ All notable changes to [bpmnlint-pack-config](https://github.com/nikku/bpmnlint-
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.7.0
+
+* `FEAT`: load `bpmnlint` from local path
+* `FEAT`: indicate missing `bpmnlint` with meaningful error message
+* `DEPS`: mark as `bpmnlint@7` compatible
+* `DEPS`: update depedencies
+
 ## 0.6.1
 
 * `CHORE`: restore single output internal API
