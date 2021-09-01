@@ -23,10 +23,9 @@ describe('bpmnlint-pack-config', function() {
       expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = conditionalFlows;');
 
       // exports are in place
-      expect(code).to.contain('exports.default = bundle');
-
-      expect(code).to.contain('exports.config = config');
-      expect(code).to.contain('exports.resolver = resolver');
+      expect(code).to.contain('exports[\'default\'] = bundle;');
+      expect(code).to.contain('exports.config = config;');
+      expect(code).to.contain('exports.resolver = resolver;');
     });
 
 
@@ -44,8 +43,7 @@ describe('bpmnlint-pack-config', function() {
       expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = conditionalFlows;');
 
       // exports are in place
-      expect(code).to.contain('export default bundle;');
-      expect(code).to.contain('export { config, resolver }');
+      expect(code).to.contain('export { config, bundle as default, resolver };');
     });
 
 
@@ -63,9 +61,9 @@ describe('bpmnlint-pack-config', function() {
       expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = conditionalFlows;');
 
       // exports are in place
+      expect(code).to.contain('exports[\'default\'] = bundle;');
       expect(code).to.contain('exports.config = config;');
       expect(code).to.contain('exports.resolver = resolver;');
-      expect(code).to.contain('exports.default = bundle;');
 
       expect(code).to.contain('global.FOO = {}');
     });
