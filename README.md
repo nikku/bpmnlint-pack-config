@@ -1,6 +1,6 @@
 # bpmnlint-pack-config
 
-[![CI](https://github.com/nikku/bpmnlint-pac-config/workflows/CI/badge.svg)](https://github.com/nikku/bpmnlint-pack-config/actions?query=workflow%3ACI)
+[![CI](https://github.com/nikku/bpmnlint-pack-config/workflows/CI/badge.svg)](https://github.com/nikku/bpmnlint-pack-config/actions?query=workflow%3ACI)
 
 Pack a [bpmnlint](https://github.com/bpmn-io/bpmnlint) configuration as a consumable bundle.
 
