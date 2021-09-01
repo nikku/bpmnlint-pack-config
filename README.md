@@ -10,7 +10,7 @@ Pack a [bpmnlint](https://github.com/bpmn-io/bpmnlint) configuration as a consum
 Pack a configuration using the `bpmnlint-pack-config` executable:
 
 ```
-bpmnlint-pack-config -c .bpmnlintrc -o packed-config.js -t es
+npx bpmnlint-pack-config -c .bpmnlintrc -o packed-config.js -t es
 ```
 
 Consume the packed config as part of your web-modeler:
