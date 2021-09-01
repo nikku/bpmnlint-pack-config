@@ -25,7 +25,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "bpmnlint": "^6.1.1",
+    "bpmnlint": "^7.2.1",
     "chai": "^4.1.2",
     "eslint": "^6.3.0",
     "eslint-plugin-bpmn-io": "^0.10.0",
@@ -40,6 +40,6 @@
     "rollup-plugin-node-resolve": "^5.2.0"
   },
   "peerDependencies": {
-    "bpmnlint": "^3.2.0 || ^4.0.0 || ^5.0.0 || ^6.0.0"
+    "bpmnlint": "^3.2.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0"
   }
 }
