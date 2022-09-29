@@ -6,6 +6,10 @@ All notable changes to [bpmnlint-pack-config](https://github.com/nikku/bpmnlint-
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.8.0
+
+* `DEPS`: support `bpmnlint>=8`
+
 ## 0.7.0
 
 * `FEAT`: load `bpmnlint` from local path
