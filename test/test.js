@@ -20,10 +20,10 @@ describe('bpmnlint-pack-config', function() {
 
       // rules are resolved
       expect(code).to.contain('"conditional-flows": "error"');
-      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = conditionalFlows;');
+      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = rule_0;');
 
       // exports are in place
-      expect(code).to.contain('exports["default"] = bundle;');
+      expect(code).to.contain('exports.default = bundle;');
       expect(code).to.contain('exports.config = config;');
       expect(code).to.contain('exports.resolver = resolver;');
     });
@@ -40,7 +40,7 @@ describe('bpmnlint-pack-config', function() {
 
       // rules are resolved
       expect(code).to.contain('"conditional-flows": "error"');
-      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = conditionalFlows;');
+      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = rule_0;');
 
       // exports are in place
       expect(code).to.contain('export { config, bundle as default, resolver };');
@@ -58,10 +58,10 @@ describe('bpmnlint-pack-config', function() {
 
       // rules are resolved
       expect(code).to.contain('"conditional-flows": "error"');
-      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = conditionalFlows;');
+      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = rule_0;');
 
       // exports are in place
-      expect(code).to.contain('exports["default"] = bundle;');
+      expect(code).to.contain('exports.default = bundle;');
       expect(code).to.contain('exports.config = config;');
       expect(code).to.contain('exports.resolver = resolver;');
 
@@ -80,7 +80,7 @@ describe('bpmnlint-pack-config', function() {
 
       // rules are resolved
       expect(code).to.contain('"conditional-flows": "error"');
-      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = conditionalFlows;');
+      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = rule_0;');
     });
 
   });
