@@ -2,7 +2,7 @@
 
 const mri = require('mri');
 
-const { writeFileSync } = require('fs');
+const { writeFileSync } = require('node:fs');
 
 const { packConfig } = require('..');
 
