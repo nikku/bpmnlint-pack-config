@@ -20,7 +20,7 @@ describe('bpmnlint-pack-config', function() {
 
       // rules are resolved
       expect(code).to.contain('"conditional-flows": "error"');
-      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = rule_0;');
+      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = rule_1;');
 
       // exports are in place
       expect(code).to.contain('exports.default = bundle;');
@@ -40,10 +40,10 @@ describe('bpmnlint-pack-config', function() {
 
       // rules are resolved
       expect(code).to.contain('"conditional-flows": "error"');
-      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = rule_0;');
+      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = rule_1;');
 
       // exports are in place
-      expect(code).to.contain('export { config, bundle as default, resolver };');
+      expect(code).to.contain('export { config, bundle as default, moddleExtensions, resolver };');
     });
 
 
@@ -58,7 +58,7 @@ describe('bpmnlint-pack-config', function() {
 
       // rules are resolved
       expect(code).to.contain('"conditional-flows": "error"');
-      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = rule_0;');
+      expect(code).to.contain('cache[\'bpmnlint/conditional-flows\'] = rule_1;');
 
       // exports are in place
       expect(code).to.contain('exports.default = bundle;');
